@@ -10,3 +10,8 @@ spring:
     database-platform: org.hibernate.dialect.MySQLDialect
     hibernate:
       ddl-auto: update
+
+jwt:
+  secret: portfolio-backend-super-secret-key-123456
+  expiration: 86400000
+

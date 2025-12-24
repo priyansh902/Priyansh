@@ -1,10 +1,12 @@
 package com.priyansh.portfolio_backend.auth.model.security;
 
-
-import org.springframework.security.core.userdetails.*;
 import org.springframework.stereotype.Service;
 
+
 import com.priyansh.portfolio_backend.auth.model.repositiory.UserRepository;
+
+import org.springframework.security.core.userdetails.*;
+
 
 @Service
 public class CustomUserDetailsService implements UserDetailsService {
@@ -19,14 +21,8 @@ public class CustomUserDetailsService implements UserDetailsService {
     public UserDetails loadUserByUsername(String email)
             throws UsernameNotFoundException {
 
-        User user = userRepository.findByEmail(email)
-                .orElseThrow(() -> new UsernameNotFoundException("User not found"));
-
-        return org.springframework.security.core.userdetails.User
-                .withUsername(user.getEmail())
-                .password(user.getPassword())
-                .roles(user.getRole())
-                .build();
+        return userRepository.findByEmail(email.toLowerCase())
+                .orElseThrow(() ->
+                        new UsernameNotFoundException("User not found: " + email));
     }
 }
-
