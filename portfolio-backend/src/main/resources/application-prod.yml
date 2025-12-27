@@ -1,0 +1,16 @@
+spring:
+  datasource:
+    url: jdbc:mysql://portfolio-db.cle2xyz.ap-south-1.rds.amazonaws.com:3306/portfolio
+    username: admin
+    password: ${DB_PASSWORD}
+
+  jpa:
+    show-sql: false
+
+logging:
+  level:
+    root: WARN
+    org.springframework.security: INFO
+jwt:
+  secret: ${JWT_SECRET}
+  expiration: 86400000
