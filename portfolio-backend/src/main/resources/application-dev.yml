@@ -1,17 +1,17 @@
-spring:
-  datasource:
-    url: jdbc:mysql://localhost:3306/priyansh?createDatabaseIfNotExist=true
-    username: root
-    password: 9027707502
+# spring:
+#   datasource:
+#     url: jdbc:mysql://localhost:3306/priyansh?createDatabaseIfNotExist=true
+#     username: root
+#     password: 
 
-  jpa:
-    show-sql: true
+#   jpa:
+#     show-sql: true
 
-logging:
-  level:
-    org.hibernate.SQL: DEBUG
-    org.springframework.security: DEBUG
+# logging:
+#   level:
+#     org.hibernate.SQL: DEBUG
+#     org.springframework.security: DEBUG
 
-jwt:
-  secret: portfolio-backend-super-secret-key-123456
-  expiration: 86400000
+# jwt:
+#   secret: portfolio-backend-super-secret-key-123456
+#   expiration: 86400000

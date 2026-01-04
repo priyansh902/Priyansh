@@ -26,15 +26,6 @@ public class AuthController {
     private final UserRepository userRepository;
     private final PasswordEncoder passwordEncoder;
 
-
-    // public AuthController(AuthenticationManager authenticationManager,
-    //                       JwtUtil jwtUtil,UserRepository userRepository) {
-    //     this.authenticationManager = authenticationManager;
-    //     this.jwtUtil = jwtUtil;
-    //     this.userRepository = userRepository;
-    //     this.passwordEncoder = null;
-    // }
-
      // LOGIN
     @PostMapping("/login")
     public LoginResponse login(@Valid @RequestBody Loginrequest request) {
