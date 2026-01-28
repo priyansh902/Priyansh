@@ -3,7 +3,7 @@ server:
 
 spring:
   datasource:
-    url: jdbc:${MYSQL_URL}
+    url: ${MYSQL_URL}
     username: ${MYSQLUSER}
     password: ${MYSQLPASSWORD}
 
